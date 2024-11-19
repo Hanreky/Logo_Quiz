@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz de Imagens</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .creditos-container {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .creditos {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      animation: scroll 15s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        top: 100%; /* Start at the bottom of the screen */
+      }
+      100% {
+        top: -100%; /* End at the top of the screen */
+      }
+    }
+
+    button {
+      background-color: #9a6600;
+      border: 2px solid #993100;
+      font-size: 1.2rem;
+      margin: 20px;
+      padding: 10px 20px;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.2);
+      background-color: #b37200;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .creditos {
+        animation: scroll 20s linear infinite; /* Slower scroll for smaller devices */
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 8px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="creditos-container">
+    <div class="creditos">
+      <h1>Desenvolvido por</h1>
+      <p>Caio Henrique Picelli de Freitas</p>
+      <p>Karen Luisa da Silva Nabas</p>
+      <p>Jonatha Vieira da Costa</p>
+      <p>Murilo Ramos Lamana Figueiredo</p>
+      <p>Mikael de Freitas Pimentel</p>
+      <h2>1°DSA</h2>
+    </div>
+    <a href="index.html"><button>Voltar</button></a>
+  </div>
+</body>
+</html>
+      
