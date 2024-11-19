@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz de Imagens</title>
+  <style>
+      body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden; /* Prevent scrollbar */
+    }
+
+    .creditos-container {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden; /* Hide text as it scrolls out of view */
+    }
+
+    .creditos {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      animation: scroll 10s linear infinite; /* Adjust duration for speed */
+    }
+
+    @keyframes scroll {
+      0% {
+        top: 100%; /* Start at the bottom of the screen */
+      }
+      100% {
+        top: -100%; /* End at the top of the screen */
+      }
+    }
+  button {
+      background-color: #9a6600;
+      border: 4px solid #993100;
+      font-size: 20px;
+      margin: 20px auto;
+    }
+  button:hover {
+      transform: scale(1.2);
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #555;
+    }
+  a {
+    text-decoration: none;
+    color: black
+  }
+  </style>
+</head>
+<body>
+  <div class="creditos-container">
+    <div class="creditos">
+      <h1>Desenvolvido por</h1>
+      <br>
+      Caio Henrique Picelli de Freitas
+      <br>
+      <br>Karen Luisa da Silva Nabas
+      <br>
+      <br>Jonatha Vieira da Costa
+      <br>
+      <br>Murilo Ramos Lamana Figueiredo
+      <br>
+      <br>Mikael de Freitas Pimentel
+      <br>
+      <br> <h2>1°DSA</h2>
+    </div>
+    <a href="index.html"><button>Voltar</button></a>
+  </div>
+</body>
+</html>
