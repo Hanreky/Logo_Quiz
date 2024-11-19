@@ -56,9 +56,15 @@ document.getElementById("texto-pergunta").textContent =
         divResultado.style.color = "green";
         pontuacao++; 
         atualizarPontuacao(); 
-      } else {
+      } 
+      else if(pontuacao == 0){
+        atualizarPontuacao();
+      }
+      else {
         divResultado.textContent = "Resposta errada. Boa sorte na próxima!";
         divResultado.style.color = "red";
+        pontuacao = pontuacao - 1;
+        atualizarPontuacao(); 
       }
               document.querySelector(".imagens").innerHTML = "";
               document.getElementById("pabens").innerHTML = "";
