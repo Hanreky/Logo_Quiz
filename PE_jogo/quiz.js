@@ -20,14 +20,83 @@ const perguntas = [
           { src: "imagens/spotify2.png", correta: true },
         ],
       },
+    {
+    texto: "",
+        imagens: [
+          { src: "imagens/pringles1.jpg", correta: false },
+          { src: "imagens/pringles2.jpg", correta: true },
+        ],
+      },
+       {
+    texto: "",
+        imagens: [
+          { src: "imagens/pepsi1.jpg", correta: false },
+          { src: "imagens/pepsi2.jpg", correta: true },
+        ],
+      },
+       {
+    texto: "",
+        imagens: [
+          { src: "imagens/nasa1.jpg", correta: false },
+          { src: "imagens/nasa2.jpg", correta: true },
+        ],
+      },
+      {
+    texto: "",
+        imagens: [
+          { src: "imagens/ttk1.jpg", correta: false },
+          { src: "imagens/ttk2.jpg", correta: true },
+        ],
+      },
+      {
+    texto: "",
+        imagens: [
+          { src: "imagens/nuttela1.jpg", correta: false },
+          { src: "imagens/nuttela2.jpg", correta: true },
+        ],
+      },
+      {
+    texto: "",
+        imagens: [
+          { src: "imagens/sam1.jpg", correta: false },
+          { src: "imagens/sam2.jpg", correta: true },
+        ],
+      },
+         {
+    texto: "",
+        imagens: [
+          { src: "imagens/red1.jpg", correta: false },
+          { src: "imagens/red2.jpg", correta: true },
+        ],
+      },
+    {
+      texto: "",
+        imagens: [
+          { src: "imagens/w1.jpg", correta: false },
+          { src: "imagens/w2.jpg", correta: true },
+        ],
+      },
+      {
+        texto:"",
+        imagens: [
+          { src : "imagens/kfc2.jpeg", correta: true},
+          { src: "imagens/kfc1.jpeg", correta: false},
+        ]
+      },
+      {
+        texto:"",
+        imagens: [
+          { src: "imagens/windows1.png", correta: true},
+          { src: "imagens/windows2.png", correta: false}
+        ]
+      },
     ];
 
     let indicePerguntaAtual = 0;
     let pontuacao = 0;
 
     function carregarPergunta() {
-      const pergunta = perguntas[indicePerguntaAtual];
-      document.getElementById("texto-pergunta").textContent = pergunta.texto;
+      const pergunta = perguntas[indicePerguntaAtual]; document.getElementById("texto-pergunta").textContent = pergunta.texto;
       const containerImagens = document.querySelector(".imagens");
       containerImagens.innerHTML = pergunta.imagens
         .map(
@@ -52,19 +121,27 @@ document.getElementById("texto-pergunta").textContent =
       const divResultado = document.getElementById("resultado");
 
       if (pergunta.imagens[indiceSelecionado].correta) {
-        divResultado.textContent = "Correto! Você escolheu a imagem certa.";
+        divResultado.textContent = "Correto! Você escolheu a imagem certa. +1 ponto.";
         divResultado.style.color = "green";
         pontuacao++; 
         atualizarPontuacao(); 
+        const acertoSom = document.getElementById("acerto-som");
+        acertoSom.play();
       } 
       else if(pontuacao == 0){
-        atualizarPontuacao();
-      }
-      else {
         divResultado.textContent = "Resposta errada. Boa sorte na próxima!";
         divResultado.style.color = "red";
+        atualizarPontuacao();
+        const erroSom = document.getElementById("erro-som");
+        erroSom.play();
+      }
+      else {
+        divResultado.textContent = "Resposta errada. Boa sorte na próxima! -1 ponto.";
+        divResultado.style.color = "red";
         pontuacao = pontuacao - 1;
-        atualizarPontuacao(); 
+        atualizarPontuacao();
+        const erroSom = document.getElementById("erro-som");
+        erroSom.play();
       }
               document.querySelector(".imagens").innerHTML = "";
               document.getElementById("pabens").innerHTML = "";
