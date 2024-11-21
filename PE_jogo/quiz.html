@@ -161,21 +161,28 @@
         font-size: 0.9em;
       }
     }
+    #mensagem{
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
 
   </style>
 </head>
 <body>
   <h1 id="texto-pergunta">1.</h1>
-  <p id="pabens">Escolha a logo correta.</p>
+  <p id="pabens">Escolha a logo correta:</p>
 
   <div class="imagens">
   
   </div>
 
   <div id="resultado"></div>
+  <div id="mensagem"></div>
   <div id="pontuacao">Pontuação: 0</div>
-  <audio id="acerto-som" src="sons/acerto.mp3"></audio>
-  <audio id="erro-som" src="sons/erro.mp3"></audio>
+  <audio id="acerto-som" src="sons/correct.mp3"></audio>
+  <audio id="erro-som" src="sons/incorrect.mp3"></audio>
+  <audio id="bom-som" src="sons/acerto.mp3"></audio>
+  <audio id="ruim-som" src="sons/erro.mp3"></audio>
   <button id="botao-proximo" style="display: none;" onclick="carregarProximaPergunta()">Próxima Pergunta</button>
   <a href="index.html"><button id="home">Home</button></a>
 
