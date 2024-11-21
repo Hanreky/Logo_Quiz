@@ -162,8 +162,8 @@
         {
           texto:"",
           imagens: [
-            {src:"imagens/nintendo1.png", correta: true},
-            {src:"imagens/nintendo2.png", correta: false}
+            {src:"imagens/nintendo1.png", correta: false},
+            {src:"imagens/nintendo2.png", correta: true}
           ]
         },
         {
