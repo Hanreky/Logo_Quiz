@@ -1,4 +1,6 @@
-  const perguntas = [{
+const spookySom = document.getElementById("spooky");
+spookySom.play();
+const perguntas = [{
             texto: "",
             imagens: [
       { src: "imagens/coca1.jpg", correta: true },
