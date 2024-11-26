@@ -1,5 +1,3 @@
-const spookySom = document.getElementById("spooky");
-spookySom.play();
 const perguntas = [{
             texto: "",
             imagens: [
