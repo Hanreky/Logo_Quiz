@@ -13,23 +13,52 @@
             margin: 0;
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
+            overflow: hidden;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
+        .main-image {
+            z-index: 10;
+            position: relative;
             border-radius: 10px;
+        }
+        .troll-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            animation: moveAround 5s infinite;
+            z-index: 5;
+        }
+        @keyframes moveAround {
+            0% {
+                transform: translate(calc(100vw - 20px), calc(100vh - 20px));
+            }
+            25% {
+                transform: translate(20px, calc(100vh - 20px));
+            }
+            50% {
+                transform: translate(20px, 20px);
+            }
+            75% {
+                transform: translate(calc(100vw - 20px), 20px);
+            }
+            100% {
+                transform: translate(calc(100vw - 20px), calc(100vh - 20px));
+            }
         }
     </style>
 </head>
 <body>
-   
     <audio autoplay loop>
         <source src="sons/spooky.mp3" type="audio/mpeg">
         Natan God
     </audio>
 
-   
-    <img src="imagens/natan.jpeg" alt="Imagem de Natan">
+    <img class="main-image" src="imagens/natan.jpeg" alt="Imagem de Natan">
+
+    <!-- Imagens Troll -->
+    <img class="troll-image" src="imagens/natal_angel.png" alt="Troll">
+    <img class="troll-image" src="imagens/natal_angel.png" alt="Troll">
+    <img class="troll-image" src="imagens/natal_angel.png" alt="Troll">
+    <img class="troll-image" src="imagens/natal_angel.png" alt="Troll">
+    <img class="troll-image" src="imagens/natal_angel.png" alt="Troll">
 </body>
 </html>
